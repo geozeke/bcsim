@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>bcsim.tools API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>bcsim.tools</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import curses
+import multiprocessing as mp
+import os
+
+from bcsim import Clock
+from bcsim import FastClock
+from datetime import datetime as dt
+
+
+def clear():
+    &#34;&#34;&#34;Clear the screen
+
+    This is an os-agnostic version, which will work with both Windows
+    and Linux.
+    &#34;&#34;&#34;
+    return os.system(&#39;clear&#39; if os.name == &#39;posix&#39; else &#39;cls&#39;)
+
+# --------------------------------------------------------------------
+
+
+def runClock(balls, q, fast=False):
+    &#34;&#34;&#34;Cycle an individual clock until it returns to its initial state.
+
+    Arguments
+    ---------
+    balls : `int`
+        The number of balls to be loaded into the reservoir at the
+        start. For rolling ball clocks, the minimum number of balls
+        permitted is 27.
+    q : managed queue
+        *q* is a [managed queue](https://docs.python.org/3/library/\
+        multiprocessing.html#multiprocessing.Queue) from
+        Python&#39;s [multiprocessing module](https://docs.python.org/3/\
+        library/multiprocessing.html). As individual processes start
+        cycling clocks, they will provide an updated status of the
+        number of simulated days achieved on regular intervals. Those
+        status updates are put into a managed queue, to be retrieved by
+        the main simulation code and displayed on screen. The
+        periodicity for reports is called `stride` and is set at 1,000
+        days for a regular `library.clocks.Clock` and 10,000 days for a
+        `library.clocks.FastClock.`
+    fast : `bool`, optional
+        If set to `False`, a regular `library.clocks.Clock` is created
+        and cycled. If set to `True`, a `library.clocks.FastClock` is
+        used.
+
+    Returns
+    -------
+    result : (int, int)
+        The result of a running clock is a tuple containing the number
+        of balls in the clock, and the elapsed number of days it took to
+        cycle back to its initial state.
+    &#34;&#34;&#34;
+    pid = os.getpid()
+    start = dt.now()
+    if fast:
+        c = FastClock(balls)
+        stride = 10000
+    else:
+        c = Clock(balls)
+        stride = 1000
+    while True:
+        if c.elapsedDays % stride == 0:
+            q.put((pid, balls, int(c.elapsedDays), False))
+        if fast:
+            c.tick()
+        else:
+            for _ in range(720):
+                c.tick()
+        if c.inInitalState():
+            q.put((pid, balls, int(c.elapsedDays), True))
+            break
+    stop = dt.now()
+    return balls, c.elapsedDays, (stop-start)
+
+# ---------------------------------------------------------------
+
+
+def runSimulation(stdscr, args):
+
+    stdscr.clear()
+    curses.curs_set(0)
+
+    # Baseline values
+    counter = args.max - args.min + 1
+    y0 = 3
+    x0 = 5
+    workers = mp.cpu_count()
+    bannerlines = 2
+
+    # Field widths: pw = pid width; sw = status width; bw = ball width, dw =
+    # days width; tw = total width (including internal spaces and a single
+    # trailing space)
+    pw = 6
+    sw = 10
+    bw = 6
+    dw = 17
+    tw = pw + sw + bw + dw + 4
+
+    # Grid positions for on-screen elements
+    ban_y0 = y0
+    ban_x0 = x0
+    ban_w = 50
+    hdr_y0 = y0 + bannerlines + 1
+    hdr_x0 = x0 + 2
+    box_y0 = hdr_y0 + 1
+    box_x0 = x0
+    box_h = workers + 2
+    box_w = tw + 3
+
+    # Banner lines printed before status box
+    ban_win1 = curses.newwin(1, ban_w, ban_y0, ban_x0)
+    ban_win2 = curses.newwin(1, ban_w, ban_y0+1, ban_x0)
+    ban_1 = &#34;Number of process workers: {0}&#34;
+    ban_2 = &#34;Number of clocks in queue: {0}&#34;
+    ban_win1.addstr(0, 0, ban_1.format(workers))
+    ban_win2.addstr(0, 0, ban_2.format(counter))
+    ban_win1.refresh()
+    ban_win2.refresh()
+
+    # Header labels for status box
+    h1 = &#39;pid&#39;
+    h2 = &#39;status&#39;
+    h3 = &#39;balls&#39;
+    h4 = &#39;simulated days&#39;
+    s = f&#34;{h1:&lt;{pw}} {h2:&lt;{sw}} {h3:&lt;{bw}} {h4:&lt;{dw}}&#34;
+    hdr_win = curses.newwin(1, tw, hdr_y0, hdr_x0)
+    hdr_win.addstr(0, 0, s)
+    hdr_win.refresh()
+
+    # Box
+    box = curses.newwin(box_h, box_w, box_y0, box_x0)
+    box.box()
+    box.refresh()
+
+    # Create a queue and build/fill a pool with jobs
+    q = mp.Manager().Queue()
+    results = []
+    workers_D = {}
+    poolData = [(i, q, args.fast) for i in range(args.min, args.max+1)]
+    p = mp.Pool(workers)
+    for data in poolData:
+        results.append(p.apply_async(runClock, data))
+    p.close()
+
+    # Cycle through the queue, grabbing and posting the status of jobs
+    row = 1
+    while True:
+        # This blocks until something is in the queue
+        t = q.get()
+        pid, balls, days, done = t[0], t[1], t[2], t[3]
+        if pid not in workers_D:
+            workers_D[pid] = curses.newwin(1, tw, box_y0+row, hdr_x0)
+            row += 1
+        if done:
+            counter -= 1
+            status = &#39;Done&#39;
+            s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {0:&lt;{bw},d} {0:-&gt;{dw},d}&#34;
+            ban_win2.clrtoeol()
+            ban_win2.addstr(0, 0, ban_2.format(counter))
+            ban_win2.refresh()
+        else:
+            status = &#39;Working&#39;
+            s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {balls:&lt;{bw},d} {days:-&gt;{dw},d}&#34;
+        workers_D[pid].clrtoeol()
+        workers_D[pid].addstr(0, 0, s)
+        workers_D[pid].refresh()
+        if counter == 0:
+            break
+
+    p.join()
+    for result in results:
+        t = result.get()
+        args.outfile.write(f&#39;{str(t[0])},{str(t[1])},{str(t[2])}\n&#39;)
+
+    curses.curs_set(1)
+    return
+
+# --------------------------------------------------------------------
+
+
+if __name__ == &#39;__main__&#39;:
+    pass</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="bcsim.tools.clear"><code class="name flex">
+<span>def <span class="ident">clear</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Clear the screen</p>
+<p>This is an os-agnostic version, which will work with both Windows
+and Linux.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def clear():
+    &#34;&#34;&#34;Clear the screen
+
+    This is an os-agnostic version, which will work with both Windows
+    and Linux.
+    &#34;&#34;&#34;
+    return os.system(&#39;clear&#39; if os.name == &#39;posix&#39; else &#39;cls&#39;)</code></pre>
+</details>
+</dd>
+<dt id="bcsim.tools.runClock"><code class="name flex">
+<span>def <span class="ident">runClock</span></span>(<span>balls, q, fast=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cycle an individual clock until it returns to its initial state.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>balls</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of balls to be loaded into the reservoir at the
+start. For rolling ball clocks, the minimum number of balls
+permitted is 27.</dd>
+<dt><strong><code>q</code></strong> :&ensp;<code>managed queue</code></dt>
+<dd><em>q</em> is a <a href="https://docs.python.org/3/library/
+multiprocessing.html#multiprocessing.Queue">managed queue</a> from
+Python's <a href="https://docs.python.org/3/
+library/multiprocessing.html">multiprocessing module</a>. As individual processes start
+cycling clocks, they will provide an updated status of the
+number of simulated days achieved on regular intervals. Those
+status updates are put into a managed queue, to be retrieved by
+the main simulation code and displayed on screen. The
+periodicity for reports is called <code>stride</code> and is set at 1,000
+days for a regular <code>library.clocks.Clock</code> and 10,000 days for a
+<code>library.clocks.FastClock.</code></dd>
+<dt><strong><code>fast</code></strong> :&ensp;<code>bool</code>, optional</dt>
+<dd>If set to <code>False</code>, a regular <code>library.clocks.Clock</code> is created
+and cycled. If set to <code>True</code>, a <code>library.clocks.FastClock</code> is
+used.</dd>
+</dl>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>result</code></strong> :&ensp;<code>(int, int)</code></dt>
+<dd>The result of a running clock is a tuple containing the number
+of balls in the clock, and the elapsed number of days it took to
+cycle back to its initial state.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def runClock(balls, q, fast=False):
+    &#34;&#34;&#34;Cycle an individual clock until it returns to its initial state.
+
+    Arguments
+    ---------
+    balls : `int`
+        The number of balls to be loaded into the reservoir at the
+        start. For rolling ball clocks, the minimum number of balls
+        permitted is 27.
+    q : managed queue
+        *q* is a [managed queue](https://docs.python.org/3/library/\
+        multiprocessing.html#multiprocessing.Queue) from
+        Python&#39;s [multiprocessing module](https://docs.python.org/3/\
+        library/multiprocessing.html). As individual processes start
+        cycling clocks, they will provide an updated status of the
+        number of simulated days achieved on regular intervals. Those
+        status updates are put into a managed queue, to be retrieved by
+        the main simulation code and displayed on screen. The
+        periodicity for reports is called `stride` and is set at 1,000
+        days for a regular `library.clocks.Clock` and 10,000 days for a
+        `library.clocks.FastClock.`
+    fast : `bool`, optional
+        If set to `False`, a regular `library.clocks.Clock` is created
+        and cycled. If set to `True`, a `library.clocks.FastClock` is
+        used.
+
+    Returns
+    -------
+    result : (int, int)
+        The result of a running clock is a tuple containing the number
+        of balls in the clock, and the elapsed number of days it took to
+        cycle back to its initial state.
+    &#34;&#34;&#34;
+    pid = os.getpid()
+    start = dt.now()
+    if fast:
+        c = FastClock(balls)
+        stride = 10000
+    else:
+        c = Clock(balls)
+        stride = 1000
+    while True:
+        if c.elapsedDays % stride == 0:
+            q.put((pid, balls, int(c.elapsedDays), False))
+        if fast:
+            c.tick()
+        else:
+            for _ in range(720):
+                c.tick()
+        if c.inInitalState():
+            q.put((pid, balls, int(c.elapsedDays), True))
+            break
+    stop = dt.now()
+    return balls, c.elapsedDays, (stop-start)</code></pre>
+</details>
+</dd>
+<dt id="bcsim.tools.runSimulation"><code class="name flex">
+<span>def <span class="ident">runSimulation</span></span>(<span>stdscr, args)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def runSimulation(stdscr, args):
+
+    stdscr.clear()
+    curses.curs_set(0)
+
+    # Baseline values
+    counter = args.max - args.min + 1
+    y0 = 3
+    x0 = 5
+    workers = mp.cpu_count()
+    bannerlines = 2
+
+    # Field widths: pw = pid width; sw = status width; bw = ball width, dw =
+    # days width; tw = total width (including internal spaces and a single
+    # trailing space)
+    pw = 6
+    sw = 10
+    bw = 6
+    dw = 17
+    tw = pw + sw + bw + dw + 4
+
+    # Grid positions for on-screen elements
+    ban_y0 = y0
+    ban_x0 = x0
+    ban_w = 50
+    hdr_y0 = y0 + bannerlines + 1
+    hdr_x0 = x0 + 2
+    box_y0 = hdr_y0 + 1
+    box_x0 = x0
+    box_h = workers + 2
+    box_w = tw + 3
+
+    # Banner lines printed before status box
+    ban_win1 = curses.newwin(1, ban_w, ban_y0, ban_x0)
+    ban_win2 = curses.newwin(1, ban_w, ban_y0+1, ban_x0)
+    ban_1 = &#34;Number of process workers: {0}&#34;
+    ban_2 = &#34;Number of clocks in queue: {0}&#34;
+    ban_win1.addstr(0, 0, ban_1.format(workers))
+    ban_win2.addstr(0, 0, ban_2.format(counter))
+    ban_win1.refresh()
+    ban_win2.refresh()
+
+    # Header labels for status box
+    h1 = &#39;pid&#39;
+    h2 = &#39;status&#39;
+    h3 = &#39;balls&#39;
+    h4 = &#39;simulated days&#39;
+    s = f&#34;{h1:&lt;{pw}} {h2:&lt;{sw}} {h3:&lt;{bw}} {h4:&lt;{dw}}&#34;
+    hdr_win = curses.newwin(1, tw, hdr_y0, hdr_x0)
+    hdr_win.addstr(0, 0, s)
+    hdr_win.refresh()
+
+    # Box
+    box = curses.newwin(box_h, box_w, box_y0, box_x0)
+    box.box()
+    box.refresh()
+
+    # Create a queue and build/fill a pool with jobs
+    q = mp.Manager().Queue()
+    results = []
+    workers_D = {}
+    poolData = [(i, q, args.fast) for i in range(args.min, args.max+1)]
+    p = mp.Pool(workers)
+    for data in poolData:
+        results.append(p.apply_async(runClock, data))
+    p.close()
+
+    # Cycle through the queue, grabbing and posting the status of jobs
+    row = 1
+    while True:
+        # This blocks until something is in the queue
+        t = q.get()
+        pid, balls, days, done = t[0], t[1], t[2], t[3]
+        if pid not in workers_D:
+            workers_D[pid] = curses.newwin(1, tw, box_y0+row, hdr_x0)
+            row += 1
+        if done:
+            counter -= 1
+            status = &#39;Done&#39;
+            s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {0:&lt;{bw},d} {0:-&gt;{dw},d}&#34;
+            ban_win2.clrtoeol()
+            ban_win2.addstr(0, 0, ban_2.format(counter))
+            ban_win2.refresh()
+        else:
+            status = &#39;Working&#39;
+            s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {balls:&lt;{bw},d} {days:-&gt;{dw},d}&#34;
+        workers_D[pid].clrtoeol()
+        workers_D[pid].addstr(0, 0, s)
+        workers_D[pid].refresh()
+        if counter == 0:
+            break
+
+    p.join()
+    for result in results:
+        t = result.get()
+        args.outfile.write(f&#39;{str(t[0])},{str(t[1])},{str(t[2])}\n&#39;)
+
+    curses.curs_set(1)
+    return</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<table>
+<tr>
+<td><a><img src="../logo.png" width=125></a></td>
+<td><h2>Ball Clock Simulator</h2></td>
+</tr>
+</table>
+<i>Everything you need is in the box</i>
+<p><h4>
+A Simulation Of The Rolling Ball Clock<br><br>
+<a href="https://github.com/geozeke/bcsim">Source Code</a><br>
+<a href="https://github.com/geozeke/bcsim/issues">Bug Tracker</a><br>
+<a href="https://geozeke.github.io/bcsim">Documentation</a><br>
+<br>Peter Nardi<br>
+<a href="mailto:pete@nardi.com">pete@nardi.com</a><br>
+</h4></p>
+<hr>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="bcsim" href="index.html">bcsim</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="bcsim.tools.clear" href="#bcsim.tools.clear">clear</a></code></li>
+<li><code><a title="bcsim.tools.runClock" href="#bcsim.tools.runClock">runClock</a></code></li>
+<li><code><a title="bcsim.tools.runSimulation" href="#bcsim.tools.runSimulation">runSimulation</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

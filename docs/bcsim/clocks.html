@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>bcsim.clocks API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>bcsim.clocks</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from bcsim import Ball
+from bcsim import Rail
+
+
+class Clock:
+    &#34;&#34;&#34;Abstract class to represent a rolling ball clock.
+
+    The class initializer takes a *size* (int) which represents the
+    number of balls in the clock reservoir.
+
+    Arguments
+    ---------
+    size : `int`
+        The number of simulated balls in the clock reservoir.
+
+    Attributes
+    ----------
+    reservoir : `library.rail.Rail`
+        The reservoir of simulated balls that feeds the clock mechanism.
+    benchmark : `library.rail.Rail`
+        A copy of the initial clock state that can be compared to the
+        current clock state to determine when all the balls in the
+        reservoir are in their original (starting) positions.
+    elapsedDays : float
+        A count of the elapsed number of days of clock time. One
+        complete 12-hr sequence (from 1:00 to 1:00) represents 0.5
+        days.
+    rail_1 : `library.rail.Rail`
+        The simulated 1-minute rail in the clock.
+    rail_5 : `library.rail.Rail`
+        The simulated 5-minute rail in the clock.
+    rail_hr : `library.rail.Rail`
+        The simulated hour rail in the clock.
+    &#34;&#34;&#34;
+
+    def __init__(self, size):
+        self.reservoir = Rail(0)
+        self.benchmark = Rail(0)
+        for i in range(size):
+            self.reservoir.append(Ball(i))
+        # The benchmark needs to have separate ball objects from the reservoir
+        for i in range(size):
+            self.benchmark.append(Ball(i))
+        self.elapsedDays = 0.0
+        self.rail_1 = Rail(4)
+        self.rail_5 = Rail(11)
+        self.rail_hr = Rail(11)
+        return
+
+    # ------------------------------------------------------------------
+
+    def tick(self):
+        &#34;&#34;&#34;Simulate the movement of the clock.
+
+        This method simulates the clock advancing one minute. When a
+        trigger ball initiates the transition from 12:59 to 1:00, the
+        return to the reservoir is modeled in the following order: 1-min
+        rail; trigger ball; 1-hr rail; 5-min rail.
+        &#34;&#34;&#34;
+        ball = self.reservoir.draw()
+        carry_5 = None
+        carry_1 = self.rail_1.append(ball, self.reservoir)
+
+        if carry_1 is not None:
+            if (self.rail_5.size == self.rail_5.maxsize and
+                    self.rail_hr.size == self.rail_hr.maxsize):
+                self.reservoir.append(carry_1)
+                self.rail_hr.dump(self.reservoir)
+                self.rail_5.dump(self.reservoir)
+                self.elapsedDays += 0.5
+            else:
+                carry_5 = self.rail_5.append(carry_1, self.reservoir)
+
+        if carry_5 is not None:
+            self.rail_hr.append(carry_5, self.reservoir)
+
+        return
+
+    # ------------------------------------------------------------------
+
+    def inInitalState(self):
+        &#34;&#34;&#34;Determine if the clock is in its initial state.
+
+        Returns
+        -------
+        result : `bool`
+            `True` if the clock is in its initial state, `False`
+            otherwise.
+        &#34;&#34;&#34;
+        return (self.reservoir == self.benchmark)
+
+    # ------------------------------------------------------------------
+
+    def __str__(self):
+        &#34;&#34;&#34;Render the current clock state as a string.
+
+        It includes all the rails: reservoir, 1-min, 5-min, hr, and
+        shows the position of the balls in each one. This was mostly
+        used for debugging during development.
+
+        Returns
+        -------
+        clockstate : `str`
+            Returns the state of the clock, rendered as a string.
+        &#34;&#34;&#34;
+        L = []
+        L.append(&#39;\nReservoir:\n&#39; + str(self.reservoir))
+        L.append(&#39;1-minute rail:\n&#39; + str(self.rail_1))
+        L.append(&#39;5-minute rail:\n&#39; + str(self.rail_5))
+        L.append(&#39;hour-rail:\n&#39; + str(self.rail_hr))
+        L.append(f&#39;Elapsed Days: {self.elapsedDays}&#39;)
+
+        divider = &#39;\n------------------------------\n&#39;
+
+        return divider.join(L) + &#39;\n&#39;
+
+# ====================================================================
+
+
+class FastClock(Clock):
+    &#34;&#34;&#34;A fast-cycling subclass of `Clock`.
+
+    The `FastClock` class takes advantage of a repeating pattern. At
+    each 12-hr interval, all the balls in the clock are in the
+    reservoir. If you start with a fresh clock and brute-force cycle it
+    for 720 minutes (12-hrs), then you get what I call a permutation
+    vector in the reservoir. You can now treat each ball number in the
+    reservoir as an index (position) for the movement of balls every
+    12-hrs.
+
+    For example, if cycling a fresh clock 12-hrs results in ball #10
+    ending up in position #2, that means every 12-hrs the ball in
+    position #10 will migrate to position #2. Using two Python lists, we
+    can now cycle the clock for 12-hrs each `tick()`, rather then
+    1-minute for each `tick()`. The speed gains in clock cycling are
+    dramatic.
+
+    Arguments
+    ---------
+    size : `int`
+        The number of simulated balls in the clock reservoir.
+
+    Attributes
+    ----------
+    B : [`int`]
+        On initialization, the benchmark reservoir is copied into a
+        Python list as *B*.
+    P : [`int`]
+        After a fresh clock is cycled for 720 minutes, the reservoir
+        (now the permutation vector) is copied into a Python list as
+        *P*.
+    R : [`int`]
+        A copy of the initial state of the clock, with the balls in
+        `0 -&gt; n-1` order.
+    T : [`int`]
+        *T* is a list used to cycle a `FastClock` 1-day at a time. The
+        reservoir is copied into *T* based on the permutation vector;
+        *T* and *R* are then swapped; and the process is repeated.
+    &#34;&#34;&#34;
+
+    def __init__(self, size):
+
+        super().__init__(size)
+        self.R = [int(i) for i in str(self.reservoir).split()]
+        self.B = [int(i) for i in str(self.benchmark).split()]
+        self.T = [0] * size
+        # Brute force cycle clock for 720 minutes (12-hrs) to generate
+        # permutation vector and reset the day counter when complete.
+        for _ in range(720):
+            super().tick()
+        self.P = [int(i) for i in str(self.reservoir).split()]
+        # After all the FastClock attributes are set, reset the clock using the
+        # superclass initializer.
+        super().__init__(size)
+        return
+
+    def tick(self):
+        &#34;&#34;&#34;Cycle the clock through 12-hours.
+
+        This version of `tick()` takes advantage of the permutation
+        vector to rapidly cycle the clock through a 12-hr period.
+        &#34;&#34;&#34;
+        for i in range(len(self.P)):
+            self.T[i] = self.R[self.P[i]]
+        self.R, self.T = self.T, self.R
+        self.elapsedDays += 0.5
+        return
+
+    def inInitalState(self):
+        &#34;&#34;&#34;Determine if the `FastClock` is in its initial state.
+
+        If the `FastClock` version of the reservoir (*R*) is equal to
+        the `FastClock` version of the benchmark (*B*), then all the
+        balls in the clock are in their original positions.
+
+        Returns
+        -------
+        result : `bool`
+            `True` if the clock is in its initial state, `False`
+            otherwise.
+        &#34;&#34;&#34;
+        return self.R == self.B
+
+# --------------------------------------------------------------------
+
+
+if __name__ == &#39;__main__&#39;:
+    pass</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="bcsim.clocks.Clock"><code class="flex name class">
+<span>class <span class="ident">Clock</span></span>
+<span>(</span><span>size)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Abstract class to represent a rolling ball clock.</p>
+<p>The class initializer takes a <em>size</em> (int) which represents the
+number of balls in the clock reservoir.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>size</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of simulated balls in the clock reservoir.</dd>
+</dl>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>reservoir</code></strong> :&ensp;<code>library.rail.Rail</code></dt>
+<dd>The reservoir of simulated balls that feeds the clock mechanism.</dd>
+<dt><strong><code>benchmark</code></strong> :&ensp;<code>library.rail.Rail</code></dt>
+<dd>A copy of the initial clock state that can be compared to the
+current clock state to determine when all the balls in the
+reservoir are in their original (starting) positions.</dd>
+<dt><strong><code>elapsedDays</code></strong> :&ensp;<code>float</code></dt>
+<dd>A count of the elapsed number of days of clock time. One
+complete 12-hr sequence (from 1:00 to 1:00) represents 0.5
+days.</dd>
+<dt><strong><code>rail_1</code></strong> :&ensp;<code>library.rail.Rail</code></dt>
+<dd>The simulated 1-minute rail in the clock.</dd>
+<dt><strong><code>rail_5</code></strong> :&ensp;<code>library.rail.Rail</code></dt>
+<dd>The simulated 5-minute rail in the clock.</dd>
+<dt><strong><code>rail_hr</code></strong> :&ensp;<code>library.rail.Rail</code></dt>
+<dd>The simulated hour rail in the clock.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Clock:
+    &#34;&#34;&#34;Abstract class to represent a rolling ball clock.
+
+    The class initializer takes a *size* (int) which represents the
+    number of balls in the clock reservoir.
+
+    Arguments
+    ---------
+    size : `int`
+        The number of simulated balls in the clock reservoir.
+
+    Attributes
+    ----------
+    reservoir : `library.rail.Rail`
+        The reservoir of simulated balls that feeds the clock mechanism.
+    benchmark : `library.rail.Rail`
+        A copy of the initial clock state that can be compared to the
+        current clock state to determine when all the balls in the
+        reservoir are in their original (starting) positions.
+    elapsedDays : float
+        A count of the elapsed number of days of clock time. One
+        complete 12-hr sequence (from 1:00 to 1:00) represents 0.5
+        days.
+    rail_1 : `library.rail.Rail`
+        The simulated 1-minute rail in the clock.
+    rail_5 : `library.rail.Rail`
+        The simulated 5-minute rail in the clock.
+    rail_hr : `library.rail.Rail`
+        The simulated hour rail in the clock.
+    &#34;&#34;&#34;
+
+    def __init__(self, size):
+        self.reservoir = Rail(0)
+        self.benchmark = Rail(0)
+        for i in range(size):
+            self.reservoir.append(Ball(i))
+        # The benchmark needs to have separate ball objects from the reservoir
+        for i in range(size):
+            self.benchmark.append(Ball(i))
+        self.elapsedDays = 0.0
+        self.rail_1 = Rail(4)
+        self.rail_5 = Rail(11)
+        self.rail_hr = Rail(11)
+        return
+
+    # ------------------------------------------------------------------
+
+    def tick(self):
+        &#34;&#34;&#34;Simulate the movement of the clock.
+
+        This method simulates the clock advancing one minute. When a
+        trigger ball initiates the transition from 12:59 to 1:00, the
+        return to the reservoir is modeled in the following order: 1-min
+        rail; trigger ball; 1-hr rail; 5-min rail.
+        &#34;&#34;&#34;
+        ball = self.reservoir.draw()
+        carry_5 = None
+        carry_1 = self.rail_1.append(ball, self.reservoir)
+
+        if carry_1 is not None:
+            if (self.rail_5.size == self.rail_5.maxsize and
+                    self.rail_hr.size == self.rail_hr.maxsize):
+                self.reservoir.append(carry_1)
+                self.rail_hr.dump(self.reservoir)
+                self.rail_5.dump(self.reservoir)
+                self.elapsedDays += 0.5
+            else:
+                carry_5 = self.rail_5.append(carry_1, self.reservoir)
+
+        if carry_5 is not None:
+            self.rail_hr.append(carry_5, self.reservoir)
+
+        return
+
+    # ------------------------------------------------------------------
+
+    def inInitalState(self):
+        &#34;&#34;&#34;Determine if the clock is in its initial state.
+
+        Returns
+        -------
+        result : `bool`
+            `True` if the clock is in its initial state, `False`
+            otherwise.
+        &#34;&#34;&#34;
+        return (self.reservoir == self.benchmark)
+
+    # ------------------------------------------------------------------
+
+    def __str__(self):
+        &#34;&#34;&#34;Render the current clock state as a string.
+
+        It includes all the rails: reservoir, 1-min, 5-min, hr, and
+        shows the position of the balls in each one. This was mostly
+        used for debugging during development.
+
+        Returns
+        -------
+        clockstate : `str`
+            Returns the state of the clock, rendered as a string.
+        &#34;&#34;&#34;
+        L = []
+        L.append(&#39;\nReservoir:\n&#39; + str(self.reservoir))
+        L.append(&#39;1-minute rail:\n&#39; + str(self.rail_1))
+        L.append(&#39;5-minute rail:\n&#39; + str(self.rail_5))
+        L.append(&#39;hour-rail:\n&#39; + str(self.rail_hr))
+        L.append(f&#39;Elapsed Days: {self.elapsedDays}&#39;)
+
+        divider = &#39;\n------------------------------\n&#39;
+
+        return divider.join(L) + &#39;\n&#39;</code></pre>
+</details>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="bcsim.clocks.Clock.__str__"><code class="name flex">
+<span>def <span class="ident">__str__</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Render the current clock state as a string.</p>
+<p>It includes all the rails: reservoir, 1-min, 5-min, hr, and
+shows the position of the balls in each one. This was mostly
+used for debugging during development.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>clockstate</code></strong> :&ensp;<code>str</code></dt>
+<dd>Returns the state of the clock, rendered as a string.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def __str__(self):
+    &#34;&#34;&#34;Render the current clock state as a string.
+
+    It includes all the rails: reservoir, 1-min, 5-min, hr, and
+    shows the position of the balls in each one. This was mostly
+    used for debugging during development.
+
+    Returns
+    -------
+    clockstate : `str`
+        Returns the state of the clock, rendered as a string.
+    &#34;&#34;&#34;
+    L = []
+    L.append(&#39;\nReservoir:\n&#39; + str(self.reservoir))
+    L.append(&#39;1-minute rail:\n&#39; + str(self.rail_1))
+    L.append(&#39;5-minute rail:\n&#39; + str(self.rail_5))
+    L.append(&#39;hour-rail:\n&#39; + str(self.rail_hr))
+    L.append(f&#39;Elapsed Days: {self.elapsedDays}&#39;)
+
+    divider = &#39;\n------------------------------\n&#39;
+
+    return divider.join(L) + &#39;\n&#39;</code></pre>
+</details>
+</dd>
+<dt id="bcsim.clocks.Clock.inInitalState"><code class="name flex">
+<span>def <span class="ident">inInitalState</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Determine if the clock is in its initial state.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>result</code></strong> :&ensp;<code>bool</code></dt>
+<dd><code>True</code> if the clock is in its initial state, <code>False</code>
+otherwise.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def inInitalState(self):
+    &#34;&#34;&#34;Determine if the clock is in its initial state.
+
+    Returns
+    -------
+    result : `bool`
+        `True` if the clock is in its initial state, `False`
+        otherwise.
+    &#34;&#34;&#34;
+    return (self.reservoir == self.benchmark)</code></pre>
+</details>
+</dd>
+<dt id="bcsim.clocks.Clock.tick"><code class="name flex">
+<span>def <span class="ident">tick</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Simulate the movement of the clock.</p>
+<p>This method simulates the clock advancing one minute. When a
+trigger ball initiates the transition from 12:59 to 1:00, the
+return to the reservoir is modeled in the following order: 1-min
+rail; trigger ball; 1-hr rail; 5-min rail.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tick(self):
+    &#34;&#34;&#34;Simulate the movement of the clock.
+
+    This method simulates the clock advancing one minute. When a
+    trigger ball initiates the transition from 12:59 to 1:00, the
+    return to the reservoir is modeled in the following order: 1-min
+    rail; trigger ball; 1-hr rail; 5-min rail.
+    &#34;&#34;&#34;
+    ball = self.reservoir.draw()
+    carry_5 = None
+    carry_1 = self.rail_1.append(ball, self.reservoir)
+
+    if carry_1 is not None:
+        if (self.rail_5.size == self.rail_5.maxsize and
+                self.rail_hr.size == self.rail_hr.maxsize):
+            self.reservoir.append(carry_1)
+            self.rail_hr.dump(self.reservoir)
+            self.rail_5.dump(self.reservoir)
+            self.elapsedDays += 0.5
+        else:
+            carry_5 = self.rail_5.append(carry_1, self.reservoir)
+
+    if carry_5 is not None:
+        self.rail_hr.append(carry_5, self.reservoir)
+
+    return</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+<dt id="bcsim.clocks.FastClock"><code class="flex name class">
+<span>class <span class="ident">FastClock</span></span>
+<span>(</span><span>size)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>A fast-cycling subclass of <code><a title="bcsim.clocks.Clock" href="#bcsim.clocks.Clock">Clock</a></code>.</p>
+<p>The <code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code> class takes advantage of a repeating pattern. At
+each 12-hr interval, all the balls in the clock are in the
+reservoir. If you start with a fresh clock and brute-force cycle it
+for 720 minutes (12-hrs), then you get what I call a permutation
+vector in the reservoir. You can now treat each ball number in the
+reservoir as an index (position) for the movement of balls every
+12-hrs.</p>
+<p>For example, if cycling a fresh clock 12-hrs results in ball #10
+ending up in position #2, that means every 12-hrs the ball in
+position #10 will migrate to position #2. Using two Python lists, we
+can now cycle the clock for 12-hrs each <code>tick()</code>, rather then
+1-minute for each <code>tick()</code>. The speed gains in clock cycling are
+dramatic.</p>
+<h2 id="arguments">Arguments</h2>
+<dl>
+<dt><strong><code>size</code></strong> :&ensp;<code>int</code></dt>
+<dd>The number of simulated balls in the clock reservoir.</dd>
+</dl>
+<h2 id="attributes">Attributes</h2>
+<dl>
+<dt><strong><code>B</code></strong> :&ensp;<code>[</code>int<code>]</code></dt>
+<dd>On initialization, the benchmark reservoir is copied into a
+Python list as <em>B</em>.</dd>
+<dt><strong><code>P</code></strong> :&ensp;<code>[</code>int<code>]</code></dt>
+<dd>After a fresh clock is cycled for 720 minutes, the reservoir
+(now the permutation vector) is copied into a Python list as
+<em>P</em>.</dd>
+<dt><strong><code>R</code></strong> :&ensp;<code>[</code>int<code>]</code></dt>
+<dd>A copy of the initial state of the clock, with the balls in
+<code>0 -&gt; n-1</code> order.</dd>
+<dt><strong><code>T</code></strong> :&ensp;<code>[</code>int<code>]</code></dt>
+<dd><em>T</em> is a list used to cycle a <code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code> 1-day at a time. The
+reservoir is copied into <em>T</em> based on the permutation vector;
+<em>T</em> and <em>R</em> are then swapped; and the process is repeated.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class FastClock(Clock):
+    &#34;&#34;&#34;A fast-cycling subclass of `Clock`.
+
+    The `FastClock` class takes advantage of a repeating pattern. At
+    each 12-hr interval, all the balls in the clock are in the
+    reservoir. If you start with a fresh clock and brute-force cycle it
+    for 720 minutes (12-hrs), then you get what I call a permutation
+    vector in the reservoir. You can now treat each ball number in the
+    reservoir as an index (position) for the movement of balls every
+    12-hrs.
+
+    For example, if cycling a fresh clock 12-hrs results in ball #10
+    ending up in position #2, that means every 12-hrs the ball in
+    position #10 will migrate to position #2. Using two Python lists, we
+    can now cycle the clock for 12-hrs each `tick()`, rather then
+    1-minute for each `tick()`. The speed gains in clock cycling are
+    dramatic.
+
+    Arguments
+    ---------
+    size : `int`
+        The number of simulated balls in the clock reservoir.
+
+    Attributes
+    ----------
+    B : [`int`]
+        On initialization, the benchmark reservoir is copied into a
+        Python list as *B*.
+    P : [`int`]
+        After a fresh clock is cycled for 720 minutes, the reservoir
+        (now the permutation vector) is copied into a Python list as
+        *P*.
+    R : [`int`]
+        A copy of the initial state of the clock, with the balls in
+        `0 -&gt; n-1` order.
+    T : [`int`]
+        *T* is a list used to cycle a `FastClock` 1-day at a time. The
+        reservoir is copied into *T* based on the permutation vector;
+        *T* and *R* are then swapped; and the process is repeated.
+    &#34;&#34;&#34;
+
+    def __init__(self, size):
+
+        super().__init__(size)
+        self.R = [int(i) for i in str(self.reservoir).split()]
+        self.B = [int(i) for i in str(self.benchmark).split()]
+        self.T = [0] * size
+        # Brute force cycle clock for 720 minutes (12-hrs) to generate
+        # permutation vector and reset the day counter when complete.
+        for _ in range(720):
+            super().tick()
+        self.P = [int(i) for i in str(self.reservoir).split()]
+        # After all the FastClock attributes are set, reset the clock using the
+        # superclass initializer.
+        super().__init__(size)
+        return
+
+    def tick(self):
+        &#34;&#34;&#34;Cycle the clock through 12-hours.
+
+        This version of `tick()` takes advantage of the permutation
+        vector to rapidly cycle the clock through a 12-hr period.
+        &#34;&#34;&#34;
+        for i in range(len(self.P)):
+            self.T[i] = self.R[self.P[i]]
+        self.R, self.T = self.T, self.R
+        self.elapsedDays += 0.5
+        return
+
+    def inInitalState(self):
+        &#34;&#34;&#34;Determine if the `FastClock` is in its initial state.
+
+        If the `FastClock` version of the reservoir (*R*) is equal to
+        the `FastClock` version of the benchmark (*B*), then all the
+        balls in the clock are in their original positions.
+
+        Returns
+        -------
+        result : `bool`
+            `True` if the clock is in its initial state, `False`
+            otherwise.
+        &#34;&#34;&#34;
+        return self.R == self.B</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="bcsim.clocks.Clock" href="#bcsim.clocks.Clock">Clock</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="bcsim.clocks.FastClock.inInitalState"><code class="name flex">
+<span>def <span class="ident">inInitalState</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Determine if the <code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code> is in its initial state.</p>
+<p>If the <code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code> version of the reservoir (<em>R</em>) is equal to
+the <code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code> version of the benchmark (<em>B</em>), then all the
+balls in the clock are in their original positions.</p>
+<h2 id="returns">Returns</h2>
+<dl>
+<dt><strong><code>result</code></strong> :&ensp;<code>bool</code></dt>
+<dd><code>True</code> if the clock is in its initial state, <code>False</code>
+otherwise.</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def inInitalState(self):
+    &#34;&#34;&#34;Determine if the `FastClock` is in its initial state.
+
+    If the `FastClock` version of the reservoir (*R*) is equal to
+    the `FastClock` version of the benchmark (*B*), then all the
+    balls in the clock are in their original positions.
+
+    Returns
+    -------
+    result : `bool`
+        `True` if the clock is in its initial state, `False`
+        otherwise.
+    &#34;&#34;&#34;
+    return self.R == self.B</code></pre>
+</details>
+</dd>
+<dt id="bcsim.clocks.FastClock.tick"><code class="name flex">
+<span>def <span class="ident">tick</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Cycle the clock through 12-hours.</p>
+<p>This version of <code>tick()</code> takes advantage of the permutation
+vector to rapidly cycle the clock through a 12-hr period.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def tick(self):
+    &#34;&#34;&#34;Cycle the clock through 12-hours.
+
+    This version of `tick()` takes advantage of the permutation
+    vector to rapidly cycle the clock through a 12-hr period.
+    &#34;&#34;&#34;
+    for i in range(len(self.P)):
+        self.T[i] = self.R[self.P[i]]
+    self.R, self.T = self.T, self.R
+    self.elapsedDays += 0.5
+    return</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="bcsim.clocks.Clock" href="#bcsim.clocks.Clock">Clock</a></b></code>:
+<ul class="hlist">
+<li><code><a title="bcsim.clocks.Clock.__str__" href="#bcsim.clocks.Clock.__str__">__str__</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<table>
+<tr>
+<td><a><img src="../logo.png" width=125></a></td>
+<td><h2>Ball Clock Simulator</h2></td>
+</tr>
+</table>
+<i>Everything you need is in the box</i>
+<p><h4>
+A Simulation Of The Rolling Ball Clock<br><br>
+<a href="https://github.com/geozeke/bcsim">Source Code</a><br>
+<a href="https://github.com/geozeke/bcsim/issues">Bug Tracker</a><br>
+<a href="https://geozeke.github.io/bcsim">Documentation</a><br>
+<br>Peter Nardi<br>
+<a href="mailto:pete@nardi.com">pete@nardi.com</a><br>
+</h4></p>
+<hr>
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="bcsim" href="index.html">bcsim</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="bcsim.clocks.Clock" href="#bcsim.clocks.Clock">Clock</a></code></h4>
+<ul class="">
+<li><code><a title="bcsim.clocks.Clock.__str__" href="#bcsim.clocks.Clock.__str__">__str__</a></code></li>
+<li><code><a title="bcsim.clocks.Clock.inInitalState" href="#bcsim.clocks.Clock.inInitalState">inInitalState</a></code></li>
+<li><code><a title="bcsim.clocks.Clock.tick" href="#bcsim.clocks.Clock.tick">tick</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code></h4>
+<ul class="">
+<li><code><a title="bcsim.clocks.FastClock.inInitalState" href="#bcsim.clocks.FastClock.inInitalState">inInitalState</a></code></li>
+<li><code><a title="bcsim.clocks.FastClock.tick" href="#bcsim.clocks.FastClock.tick">tick</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
