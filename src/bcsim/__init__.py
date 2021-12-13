@@ -3,7 +3,7 @@
 .. include:: ../../docs/intro.md
 """
 
-__version__ = '1.0.0'
+__version__ = '1.0.1'
 
 from .rail import Ball
 from .rail import Rail
