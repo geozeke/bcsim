@@ -28,7 +28,7 @@ bcsim -h
 
 ## Documentation
 
-See: [Ball Clock API Documentation](https://geozeke.github.io/parser201)
+See: [Ball Clock API Documentation](https://geozeke.github.io/bcsim)
 ## What Is A Ball Clock?
 
 Start with this [YouTube video](https://www.youtube.com/watch?v=F7K6GIBWPQw) that describes exactly what a Ball Clock is. It gives you a good overview of how it works.
@@ -67,5 +67,5 @@ It's not really practical to validate my assumptions using a physical clock -- i
 
 ## Version History
 
-* 1.0.0 (2021-12-13)
+* 1.0.1 (2021-12-13)
 	* Initial release<br>
