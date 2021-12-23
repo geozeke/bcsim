@@ -71,7 +71,7 @@ It's not really practical to validate my assumptions using a physical clock -- i
 
 ## Version History
 
-* 1.0.X (XXXX-XX-XX)
+* 1.0.2 (2021-12-23)
 	* Documentation cleanup.
 	* Added site logo to README.md file.<br><br>
 * 1.0.1 (2021-12-13)
