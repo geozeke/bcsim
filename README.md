@@ -3,11 +3,15 @@
 ![PyPI - Status](https://img.shields.io/pypi/status/bcsim)
 ![GitHub last commit](https://img.shields.io/github/last-commit/geozeke/bcsim)
 ![GitHub issues](https://img.shields.io/github/issues/geozeke/bcsim)
-[![Downloads](https://pepy.tech/badge/bcsim)](https://pepy.tech/project/bcsim)
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/bcsim)
 ![GitHub repo size](https://img.shields.io/github/repo-size/geozeke/bcsim)
 ![Lines of code](https://img.shields.io/tokei/lines/github/geozeke/bcsim)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bcsim)
+
+<br>
+
+<img src="https://drive.google.com/uc?export=view&id=1H04KVAA3ohH_dLXIrC0bXuJXDn3VutKc" width="120"/>
+
 # Ball Clock Simulator
 
 ## Installation
@@ -67,5 +71,8 @@ It's not really practical to validate my assumptions using a physical clock -- i
 
 ## Version History
 
+* 1.0.2 (2021-12-23)
+	* Documentation cleanup.
+	* Added site logo to README.md file.<br><br>
 * 1.0.1 (2021-12-13)
-	* Initial release<br>
+	* Initial release
