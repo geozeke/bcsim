@@ -94,7 +94,7 @@ def runSimulation(stdscr, args):
     pw = 6
     sw = 10
     bw = 6
-    dw = 17
+    dw = 19
     tw = pw + sw + bw + dw + 4
 
     # Grid positions for on-screen elements
