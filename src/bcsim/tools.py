@@ -156,13 +156,13 @@ def runSimulation(stdscr, args):
             counter -= 1
             status = 'Done'
             s = f"{pid:<{pw}} {status:<{sw}} {0:<{bw},d} {0:->{dw},d}"
-            ban_win2.clrtoeol()
+            ban_win2.erase()
             ban_win2.addstr(0, 0, ban_2.format(counter))
             ban_win2.refresh()
         else:
             status = 'Working'
             s = f"{pid:<{pw}} {status:<{sw}} {balls:<{bw},d} {days:->{dw},d}"
-        workers_D[pid].clrtoeol()
+        workers_D[pid].erase()
         workers_D[pid].addstr(0, 0, s)
         workers_D[pid].refresh()
         if counter == 0:

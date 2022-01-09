@@ -71,6 +71,8 @@ It's not really practical to validate my assumptions using a physical clock -- i
 
 ## Version History
 
+* 1.0.4 (2022-01-09)
+	* Fixed a display glitch in the window that counts the number of clocks in queue.<br><br>
 * 1.0.3 (2022-01-03)
 	* Adjusted display width to support counting days with up to three digits in the trillions column: 999,999,999,999,999.<br><br>
 * 1.0.2 (2021-12-23)
