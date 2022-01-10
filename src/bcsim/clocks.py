@@ -78,7 +78,7 @@ class Clock:
 
     # ------------------------------------------------------------------
 
-    def inInitalState(self):
+    def inInitialState(self):
         """Determine if the clock is in its initial state.
 
         Returns
@@ -186,7 +186,7 @@ class FastClock(Clock):
         self.elapsedDays += 0.5
         return
 
-    def inInitalState(self):
+    def inInitialState(self):
         """Determine if the `FastClock` is in its initial state.
 
         If the `FastClock` version of the reservoir (*R*) is equal to

@@ -67,7 +67,7 @@ def runClock(balls, q, fast=False):
         else:
             for _ in range(720):
                 c.tick()
-        if c.inInitalState():
+        if c.inInitialState():
             q.put((pid, balls, int(c.elapsedDays), True))
             break
     stop = dt.now()
