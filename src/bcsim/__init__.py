@@ -5,12 +5,12 @@
 
 __version__ = '1.0.4'
 
-from .rail import Ball
-from .rail import Rail
-from .clocks import Clock
-from .clocks import FastClock
-from .tools import clear
-from .tools import runSimulation
+from .clocks import Clock  # noqa
+from .clocks import FastClock  # noqa
+from .rail import Ball  # noqa
+from .rail import Rail  # noqa
+from .tools import clear  # noqa
+from .tools import runSimulation  # noqa
 
 __pdoc__ = {}
 __pdoc__['clocks.Clock.__str__'] = True

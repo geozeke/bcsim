@@ -1,10 +1,10 @@
 import curses
 import multiprocessing as mp
 import os
+from datetime import datetime as dt
 
 from bcsim import Clock
 from bcsim import FastClock
-from datetime import datetime as dt
 
 
 def clear():

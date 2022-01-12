@@ -2,12 +2,12 @@
 
 import argparse
 import curses
-
-from datetime import datetime as dt
-from bcsim import runSimulation
-from bcsim import clear
-from pathlib import Path
 import sys
+from datetime import datetime as dt
+from pathlib import Path
+
+from bcsim import clear
+from bcsim import runSimulation
 
 # --------------------------------------------------------------------
 
