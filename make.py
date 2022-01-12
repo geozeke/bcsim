@@ -175,7 +175,7 @@ def main():
     msg = """Perform various utility operations for a pypi development
     project."""
 
-    epi = "Version: 1.0.2"
+    epi = "Version: 1.0.4"
 
     parser = argparse.ArgumentParser(description=msg, epilog=epi)
 
