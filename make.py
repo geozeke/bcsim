@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # Author: Peter Nardi
-# Date: 12/11/21
+# Date: 01/12/22
 # License: (see MIT License at the end of this file)
 
 # Title: make
@@ -16,7 +16,6 @@ import os
 import subprocess as sp
 import textwrap
 import webbrowser
-
 from pathlib import Path
 
 # -------------------------------------------------------------------
@@ -176,7 +175,7 @@ def main():
     msg = """Perform various utility operations for a pypi development
     project."""
 
-    epi = "Latest update: 11 Dec 2021"
+    epi = "Version: 1.0.2"
 
     parser = argparse.ArgumentParser(description=msg, epilog=epi)
 
@@ -236,7 +235,7 @@ if __name__ == '__main__':
 
 # MIT License
 
-# Copyright 2021 Peter Nardi
+# Copyright 2021-2022 Peter Nardi
 
 # Terms of use for source code:
 
