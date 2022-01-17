@@ -29,10 +29,10 @@
 <pre><code class="python">import curses
 import multiprocessing as mp
 import os
+from datetime import datetime as dt
 
 from bcsim import Clock
 from bcsim import FastClock
-from datetime import datetime as dt
 
 
 def clear():
@@ -95,7 +95,7 @@ def runClock(balls, q, fast=False):
         else:
             for _ in range(720):
                 c.tick()
-        if c.inInitalState():
+        if c.inInitialState():
             q.put((pid, balls, int(c.elapsedDays), True))
             break
     stop = dt.now()
@@ -122,7 +122,7 @@ def runSimulation(stdscr, args):
     pw = 6
     sw = 10
     bw = 6
-    dw = 17
+    dw = 19
     tw = pw + sw + bw + dw + 4
 
     # Grid positions for on-screen elements
@@ -184,13 +184,13 @@ def runSimulation(stdscr, args):
             counter -= 1
             status = &#39;Done&#39;
             s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {0:&lt;{bw},d} {0:-&gt;{dw},d}&#34;
-            ban_win2.clrtoeol()
+            ban_win2.erase()
             ban_win2.addstr(0, 0, ban_2.format(counter))
             ban_win2.refresh()
         else:
             status = &#39;Working&#39;
             s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {balls:&lt;{bw},d} {days:-&gt;{dw},d}&#34;
-        workers_D[pid].clrtoeol()
+        workers_D[pid].erase()
         workers_D[pid].addstr(0, 0, s)
         workers_D[pid].refresh()
         if counter == 0:
@@ -326,7 +326,7 @@ cycle back to its initial state.</dd>
         else:
             for _ in range(720):
                 c.tick()
-        if c.inInitalState():
+        if c.inInitialState():
             q.put((pid, balls, int(c.elapsedDays), True))
             break
     stop = dt.now()
@@ -360,7 +360,7 @@ cycle back to its initial state.</dd>
     pw = 6
     sw = 10
     bw = 6
-    dw = 17
+    dw = 19
     tw = pw + sw + bw + dw + 4
 
     # Grid positions for on-screen elements
@@ -422,13 +422,13 @@ cycle back to its initial state.</dd>
             counter -= 1
             status = &#39;Done&#39;
             s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {0:&lt;{bw},d} {0:-&gt;{dw},d}&#34;
-            ban_win2.clrtoeol()
+            ban_win2.erase()
             ban_win2.addstr(0, 0, ban_2.format(counter))
             ban_win2.refresh()
         else:
             status = &#39;Working&#39;
             s = f&#34;{pid:&lt;{pw}} {status:&lt;{sw}} {balls:&lt;{bw},d} {days:-&gt;{dw},d}&#34;
-        workers_D[pid].clrtoeol()
+        workers_D[pid].erase()
         workers_D[pid].addstr(0, 0, s)
         workers_D[pid].refresh()
         if counter == 0:

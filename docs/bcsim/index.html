@@ -39,14 +39,18 @@
 .. include:: ../../docs/intro.md
 &#34;&#34;&#34;
 
-__version__ = &#39;1.0.0&#39;
+__version__ = &#39;1.0.4&#39;
 
-from .rail import Ball
-from .rail import Rail
-from .clocks import Clock
-from .clocks import FastClock
-from .tools import clear
-from .tools import runSimulation
+# Need to enforce the correct dependency ordering, with the rail class coming
+# first. This avoid circular references when the code linter starts rearranging
+# things.
+
+from .rail import Ball  # noqa isort: skip
+from .rail import Rail  # noqa isort: skip
+from .clocks import Clock  # noqa
+from .clocks import FastClock  # noqa
+from .tools import clear  # noqa
+from .tools import runSimulation  # noqa
 
 __pdoc__ = {}
 __pdoc__[&#39;clocks.Clock.__str__&#39;] = True

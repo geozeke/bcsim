@@ -106,7 +106,7 @@ class Clock:
 
     # ------------------------------------------------------------------
 
-    def inInitalState(self):
+    def inInitialState(self):
         &#34;&#34;&#34;Determine if the clock is in its initial state.
 
         Returns
@@ -214,7 +214,7 @@ class FastClock(Clock):
         self.elapsedDays += 0.5
         return
 
-    def inInitalState(self):
+    def inInitialState(self):
         &#34;&#34;&#34;Determine if the `FastClock` is in its initial state.
 
         If the `FastClock` version of the reservoir (*R*) is equal to
@@ -357,7 +357,7 @@ days.</dd>
 
     # ------------------------------------------------------------------
 
-    def inInitalState(self):
+    def inInitialState(self):
         &#34;&#34;&#34;Determine if the clock is in its initial state.
 
         Returns
@@ -440,8 +440,8 @@ used for debugging during development.</p>
     return divider.join(L) + &#39;\n&#39;</code></pre>
 </details>
 </dd>
-<dt id="bcsim.clocks.Clock.inInitalState"><code class="name flex">
-<span>def <span class="ident">inInitalState</span></span>(<span>self)</span>
+<dt id="bcsim.clocks.Clock.inInitialState"><code class="name flex">
+<span>def <span class="ident">inInitialState</span></span>(<span>self)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Determine if the clock is in its initial state.</p>
@@ -455,7 +455,7 @@ otherwise.</dd>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def inInitalState(self):
+<pre><code class="python">def inInitialState(self):
     &#34;&#34;&#34;Determine if the clock is in its initial state.
 
     Returns
@@ -624,7 +624,7 @@ reservoir is copied into <em>T</em> based on the permutation vector;
         self.elapsedDays += 0.5
         return
 
-    def inInitalState(self):
+    def inInitialState(self):
         &#34;&#34;&#34;Determine if the `FastClock` is in its initial state.
 
         If the `FastClock` version of the reservoir (*R*) is equal to
@@ -645,8 +645,8 @@ reservoir is copied into <em>T</em> based on the permutation vector;
 </ul>
 <h3>Methods</h3>
 <dl>
-<dt id="bcsim.clocks.FastClock.inInitalState"><code class="name flex">
-<span>def <span class="ident">inInitalState</span></span>(<span>self)</span>
+<dt id="bcsim.clocks.FastClock.inInitialState"><code class="name flex">
+<span>def <span class="ident">inInitialState</span></span>(<span>self)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Determine if the <code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code> is in its initial state.</p>
@@ -663,7 +663,7 @@ otherwise.</dd>
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">def inInitalState(self):
+<pre><code class="python">def inInitialState(self):
     &#34;&#34;&#34;Determine if the `FastClock` is in its initial state.
 
     If the `FastClock` version of the reservoir (*R*) is equal to
@@ -749,14 +749,14 @@ A Simulation Of The Rolling Ball Clock<br><br>
 <h4><code><a title="bcsim.clocks.Clock" href="#bcsim.clocks.Clock">Clock</a></code></h4>
 <ul class="">
 <li><code><a title="bcsim.clocks.Clock.__str__" href="#bcsim.clocks.Clock.__str__">__str__</a></code></li>
-<li><code><a title="bcsim.clocks.Clock.inInitalState" href="#bcsim.clocks.Clock.inInitalState">inInitalState</a></code></li>
+<li><code><a title="bcsim.clocks.Clock.inInitialState" href="#bcsim.clocks.Clock.inInitialState">inInitialState</a></code></li>
 <li><code><a title="bcsim.clocks.Clock.tick" href="#bcsim.clocks.Clock.tick">tick</a></code></li>
 </ul>
 </li>
 <li>
 <h4><code><a title="bcsim.clocks.FastClock" href="#bcsim.clocks.FastClock">FastClock</a></code></h4>
 <ul class="">
-<li><code><a title="bcsim.clocks.FastClock.inInitalState" href="#bcsim.clocks.FastClock.inInitalState">inInitalState</a></code></li>
+<li><code><a title="bcsim.clocks.FastClock.inInitialState" href="#bcsim.clocks.FastClock.inInitialState">inInitialState</a></code></li>
 <li><code><a title="bcsim.clocks.FastClock.tick" href="#bcsim.clocks.FastClock.tick">tick</a></code></li>
 </ul>
 </li>

@@ -132,8 +132,8 @@ def docs(basename):
         sp.run(command.split())
 
     # Open documentation in the default browser.
-    P = str(Path(__file__).resolve().parent) + '/docs/index.html'
-    webbrowser.open('file://' + P, new=2)
+    p = Path(__file__).resolve().parent/'docs/index.html'
+    webbrowser.open(f'file://{p}', new=2)
 
     return
 
