@@ -6,8 +6,8 @@
 __version__ = '1.0.5'
 
 # Need to enforce the correct dependency ordering, with the rail class coming
-# first. This avoid circular references when the code linter starts rearranging
-# things.
+# first. This avoids circular references when the code linter starts
+# rearranging things.
 
 from .rail import Ball  # noqa isort: skip
 from .rail import Rail  # noqa isort: skip
