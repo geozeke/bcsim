@@ -61,13 +61,13 @@ At each 12-hr interval, all the balls in the clock are in the reservoir. If you 
 
 For example: if cycling a fresh clock 12-hrs results in ball #10 ending up in position #2, that means every 12-hrs the ball in position #10 will migrate to position #2. Using two Python lists, we can now cycle the clock for 12-hrs each "tick", rather then 1-minute for each "tick". The speed gains in clock cycling are dramatic.
 
-I also found that several clocks will cycle back to initial condition in a fractional number of days -- 18.5 days in the case of a clock with 38 balls. This may have something to do with the way I've modeled the clock mechanics, but I couldn't find another solution to the Ball Clock problem that cycled a given clock on the 12-hr boundary; they all cycled for a whole number of days.
+I also found that several clocks will cycle back to the initial condition in a fractional number of days -- 18.5 days in the case of a clock with 38 balls. This may have something to do with the way I've modeled the clock mechanics, but I couldn't find another solution to the Ball Clock problem that cycled a given clock on the 12-hr boundary; they all cycled for a whole number of days.
 
 ## Peer(less) Review
 
 Writing this simulator gave me some great practice with Python programming topics: argument parsing, classes, multiprocessing, inter-process communication, queues and project packaging (pypi). While not required to use the program, I also included detailed API documentation for those who are interested.
 
-It's not really practical to validate my assumptions using a physical clock -- in some cases it takes billions of simulated days to cycle back to the staring position. I would love it if someone coded this up independently, using the same clock mechanics I describe, and validated or invalidated the program's results.
+It's not really practical to validate my assumptions using a physical clock -- in some cases it takes billions of simulated days to cycle back to the starting position. I would love it if someone coded this up independently, using the same clock mechanics I describe, and validated or invalidated the program's results.
 
 ## Version History
 
