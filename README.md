@@ -71,6 +71,8 @@ It's not really practical to validate my assumptions using a physical clock -- i
 
 ## Version History
 
+* 1.0.5 (2022-01-17)
+	* Code/documentation linting and cleanup.<br><br>
 * 1.0.4 (2022-01-09)
 	* Fixed a display glitch in the window that counts the number of clocks in queue.<br><br>
 * 1.0.3 (2022-01-03)
