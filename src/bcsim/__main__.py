@@ -31,7 +31,7 @@ def main():
 
     msg = """Rolling ball clock simulator."""
 
-    epi = "Version 1.0.4"
+    epi = "Version 1.0.5"
 
     parser = argparse.ArgumentParser(description=msg, epilog=epi)
 
