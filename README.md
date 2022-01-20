@@ -33,6 +33,7 @@ bcsim -h
 ## Documentation
 
 See: [Ball Clock API Documentation](https://geozeke.github.io/bcsim)
+
 ## What Is A Ball Clock?
 
 Start with this [YouTube video](https://www.youtube.com/watch?v=F7K6GIBWPQw) that describes exactly what a Ball Clock is. It gives you a good overview of how it works.
@@ -72,13 +73,13 @@ It's not really practical to validate my assumptions using a physical clock -- i
 ## Version History
 
 * 1.0.5 (2022-01-17)
-	* Code/documentation linting and cleanup.<br><br>
+  * Code/documentation linting and cleanup.<br><br>
 * 1.0.4 (2022-01-09)
-	* Fixed a display glitch in the window that counts the number of clocks in queue.<br><br>
+  * Fixed a display glitch in the window that counts the number of clocks in queue.<br><br>
 * 1.0.3 (2022-01-03)
-	* Adjusted display width to support counting days with up to three digits in the trillions column: 999,999,999,999,999.<br><br>
+  * Adjusted display width to support counting days with up to three digits in the trillions column: 999,999,999,999,999.<br><br>
 * 1.0.2 (2021-12-23)
-	* Documentation cleanup.
-	* Added site logo to README.md file.<br><br>
+  * Documentation cleanup.
+  * Added site logo to README.md file.<br><br>
 * 1.0.1 (2021-12-13)
-	* Initial release
+  * Initial release
