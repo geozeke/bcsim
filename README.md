@@ -18,7 +18,7 @@
 
 The Ball Clock Simulator is lightweight, pure Python, with no third-party dependencies.
 
-```shell
+```text
 pip3 install bcsim  
 ```
 
@@ -26,7 +26,7 @@ pip3 install bcsim
 
 To display the help menu, run:
 
-```shell
+```text
 bcsim -h
 ```
 
