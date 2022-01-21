@@ -1,3 +1,6 @@
+"""Parts necessary to model the internals of a clock."""
+
+
 class Ball:
     """Abstract class representing a single ball in the clock.
 
@@ -63,7 +66,7 @@ class Rail:
     # ------------------------------------------------
 
     def append(self, ball, reservoir=None):
-        """Appends a new ball to the end of a rail.
+        """Append a new ball to the end of a rail.
 
         Arguments
         ---------
@@ -98,8 +101,7 @@ class Rail:
     # ------------------------------------------------
 
     def draw(self):
-        """Draw a new ball from the reservoir.
-        """
+        """Draw a new ball from the reservoir."""
         if self.head is not None:
             ball = self.head
             self.head = self.head.next

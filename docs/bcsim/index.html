@@ -25,11 +25,11 @@
 <p>This API reference is included for those who want to explore the code further.</p>
 <h2 id="installation">Installation</h2>
 <p>The Ball Clock Simulator is lightweight, pure Python, with no third-party dependencies.</p>
-<pre><code class="language-shell">pip3 install bcsim  
+<pre><code class="language-text">pip3 install bcsim  
 </code></pre>
 <h2 id="usage">Usage</h2>
 <p>To display the help menu, run:</p>
-<pre><code class="language-shell">bcsim -h
+<pre><code class="language-text">bcsim -h
 </code></pre>
 <details class="source">
 <summary>
@@ -39,38 +39,42 @@
 .. include:: ../../docs/intro.md
 &#34;&#34;&#34;
 
-__version__ = &#39;1.0.4&#39;
+__version__ = &#39;1.0.5&#39;
 
 # Need to enforce the correct dependency ordering, with the rail class coming
-# first. This avoid circular references when the code linter starts rearranging
-# things.
+# first. This avoids circular references when isort starts rearranging things.
 
-from .rail import Ball  # noqa isort: skip
-from .rail import Rail  # noqa isort: skip
-from .clocks import Clock  # noqa
-from .clocks import FastClock  # noqa
-from .tools import clear  # noqa
-from .tools import runSimulation  # noqa
+from .rail import Ball  # isort: skip
+from .rail import Rail  # isort: skip
+from .clocks import Clock
+from .clocks import FastClock
+from .tools import clear
+from .tools import runSimulation
 
 __pdoc__ = {}
 __pdoc__[&#39;clocks.Clock.__str__&#39;] = True
-__pdoc__[&#39;rail.Rail.__eq__&#39;] = True</code></pre>
+__pdoc__[&#39;rail.Rail.__eq__&#39;] = True
+__pdoc__[&#39;__main__&#39;] = True</code></pre>
 </details>
 </section>
 <section>
 <h2 class="section-title" id="header-submodules">Sub-modules</h2>
 <dl>
+<dt><code class="name"><a title="bcsim.__main__" href="__main__.html">bcsim.__main__</a></code></dt>
+<dd>
+<div class="desc"><p>Main entry point for bcsim.</p></div>
+</dd>
 <dt><code class="name"><a title="bcsim.clocks" href="clocks.html">bcsim.clocks</a></code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Clock classes.</p></div>
 </dd>
 <dt><code class="name"><a title="bcsim.rail" href="rail.html">bcsim.rail</a></code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Parts necessary to model the internals of a clock.</p></div>
 </dd>
 <dt><code class="name"><a title="bcsim.tools" href="tools.html">bcsim.tools</a></code></dt>
 <dd>
-<div class="desc"></div>
+<div class="desc"><p>Functions to manage the running of the clocks.</p></div>
 </dd>
 </dl>
 </section>
@@ -108,6 +112,7 @@ A Simulation Of The Rolling Ball Clock<br><br>
 <ul id="index">
 <li><h3><a href="#header-submodules">Sub-modules</a></h3>
 <ul>
+<li><code><a title="bcsim.__main__" href="__main__.html">bcsim.__main__</a></code></li>
 <li><code><a title="bcsim.clocks" href="clocks.html">bcsim.clocks</a></code></li>
 <li><code><a title="bcsim.rail" href="rail.html">bcsim.rail</a></code></li>
 <li><code><a title="bcsim.tools" href="tools.html">bcsim.tools</a></code></li>

@@ -1,3 +1,5 @@
+"""Functions to manage the running of the clocks."""
+
 import curses
 import multiprocessing as mp
 import os
@@ -8,7 +10,7 @@ from bcsim import FastClock
 
 
 def clear():
-    """Clear the screen
+    """Clear the screen.
 
     This is an os-agnostic version, which will work with both Windows
     and Linux.
@@ -77,7 +79,15 @@ def runClock(balls, q, fast=False):
 
 
 def runSimulation(stdscr, args):
+    """Run a selected number of clocks.
 
+    Parameters
+    ----------
+    stdscr : curses
+        Allows for screen manipulation using the curses module.
+    args : argparse
+        Command line inputs capture from the argument parser.
+    """
     stdscr.clear()
     curses.curs_set(0)
 
