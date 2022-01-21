@@ -44,7 +44,7 @@ def clear():
     This is an os-agnostic version, which will work with both Windows
     and Linux.
     &#34;&#34;&#34;
-    return os.system(&#39;clear&#39; if os.name == &#39;posix&#39; else &#39;cls&#39;)
+    os.system(&#39;clear&#39; if os.name == &#39;posix&#39; else &#39;cls&#39;)
 
 # --------------------------------------------------------------------
 
@@ -246,7 +246,7 @@ and Linux.</p></div>
     This is an os-agnostic version, which will work with both Windows
     and Linux.
     &#34;&#34;&#34;
-    return os.system(&#39;clear&#39; if os.name == &#39;posix&#39; else &#39;cls&#39;)</code></pre>
+    os.system(&#39;clear&#39; if os.name == &#39;posix&#39; else &#39;cls&#39;)</code></pre>
 </details>
 </dd>
 <dt id="bcsim.tools.runClock"><code class="name flex">
