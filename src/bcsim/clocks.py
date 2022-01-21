@@ -1,3 +1,5 @@
+"""Clock classes."""
+
 from bcsim import Ball
 from bcsim import Rail
 

@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 <meta name="generator" content="pdoc 0.10.0" />
 <title>bcsim.rail API documentation</title>
-<meta name="description" content="" />
+<meta name="description" content="Parts necessary to model the internals of a clock." />
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
 <link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
 <link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
@@ -22,11 +22,15 @@
 <h1 class="title">Module <code>bcsim.rail</code></h1>
 </header>
 <section id="section-intro">
+<p>Parts necessary to model the internals of a clock.</p>
 <details class="source">
 <summary>
 <span>Expand source code</span>
 </summary>
-<pre><code class="python">class Ball:
+<pre><code class="python">&#34;&#34;&#34;Parts necessary to model the internals of a clock.&#34;&#34;&#34;
+
+
+class Ball:
     &#34;&#34;&#34;Abstract class representing a single ball in the clock.
 
     Balls in a rail are chained together as a linked list.
@@ -91,7 +95,7 @@ class Rail:
     # ------------------------------------------------
 
     def append(self, ball, reservoir=None):
-        &#34;&#34;&#34;Appends a new ball to the end of a rail.
+        &#34;&#34;&#34;Append a new ball to the end of a rail.
 
         Arguments
         ---------
@@ -126,8 +130,7 @@ class Rail:
     # ------------------------------------------------
 
     def draw(self):
-        &#34;&#34;&#34;Draw a new ball from the reservoir.
-        &#34;&#34;&#34;
+        &#34;&#34;&#34;Draw a new ball from the reservoir.&#34;&#34;&#34;
         if self.head is not None:
             ball = self.head
             self.head = self.head.next
@@ -348,7 +351,7 @@ into a linked list.</p>
     # ------------------------------------------------
 
     def append(self, ball, reservoir=None):
-        &#34;&#34;&#34;Appends a new ball to the end of a rail.
+        &#34;&#34;&#34;Append a new ball to the end of a rail.
 
         Arguments
         ---------
@@ -383,8 +386,7 @@ into a linked list.</p>
     # ------------------------------------------------
 
     def draw(self):
-        &#34;&#34;&#34;Draw a new ball from the reservoir.
-        &#34;&#34;&#34;
+        &#34;&#34;&#34;Draw a new ball from the reservoir.&#34;&#34;&#34;
         if self.head is not None:
             ball = self.head
             self.head = self.head.next
@@ -539,7 +541,7 @@ reservoir and the benchmark are <code><a title="bcsim.rail.Rail" href="#bcsim.ra
 <span>def <span class="ident">append</span></span>(<span>self, ball, reservoir=None)</span>
 </code></dt>
 <dd>
-<div class="desc"><p>Appends a new ball to the end of a rail.</p>
+<div class="desc"><p>Append a new ball to the end of a rail.</p>
 <h2 id="arguments">Arguments</h2>
 <dl>
 <dt><strong><code>ball</code></strong> :&ensp;<code><a title="bcsim.rail.Ball" href="#bcsim.rail.Ball">Ball</a></code></dt>
@@ -561,7 +563,7 @@ the rail and <code>None</code> is returned.</dd>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def append(self, ball, reservoir=None):
-    &#34;&#34;&#34;Appends a new ball to the end of a rail.
+    &#34;&#34;&#34;Append a new ball to the end of a rail.
 
     Arguments
     ---------
@@ -604,8 +606,7 @@ the rail and <code>None</code> is returned.</dd>
 <span>Expand source code</span>
 </summary>
 <pre><code class="python">def draw(self):
-    &#34;&#34;&#34;Draw a new ball from the reservoir.
-    &#34;&#34;&#34;
+    &#34;&#34;&#34;Draw a new ball from the reservoir.&#34;&#34;&#34;
     if self.head is not None:
         ball = self.head
         self.head = self.head.next

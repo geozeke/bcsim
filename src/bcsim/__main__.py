@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Main entry point for bcsim."""
+
 import argparse
 import curses
 import sys
@@ -13,11 +15,31 @@ from bcsim import runSimulation
 
 
 def numballs_type(n):
+    """Input validation for argument parser.
+
+    Parameters
+    ----------
+    n : int
+        The number of balls to be modeled in a clock
+
+    Returns
+    -------
+    int
+        Ensures the command line input is returned as a valid int
+
+    Raises
+    ------
+    argparse.ArgumentError
+        Raised if input exceeds the range of allowable balls in a clock
+        (27 <= n <= 1000)
+    argparse.ArgumentTypeError
+        Raised if command line input cannot be cast to a valid int.
+    """
     msg = "min must be >= 27; max must be <= 1000"
     try:
         v = int(n)
         if v < 27 or v > 1000:
-            raise argparse.ArgumentTypeError(msg)
+            raise argparse.ArgumentError(msg)
     except ValueError:
         raise argparse.ArgumentTypeError("min and max must be integers")
     return v
@@ -26,9 +48,17 @@ def numballs_type(n):
 
 
 def main():
+    """Kick things off.
 
-    # Build a python argument parser
+    The main function:
 
+    1. Sets up an argument parser to capture and validate command line
+    input.
+    2. Sets up the curses environment for screen control.
+    3. Starts a timer.
+    4. Runs the simulation.
+    5. Stops the timer and shows statistics, including elapsed time.
+    """
     msg = """Rolling ball clock simulator."""
 
     epi = "Version 1.0.5"
