@@ -15,7 +15,7 @@ def clear():
     This is an os-agnostic version, which will work with both Windows
     and Linux.
     """
-    return os.system('clear' if os.name == 'posix' else 'cls')
+    os.system('clear' if os.name == 'posix' else 'cls')
 
 # --------------------------------------------------------------------
 
