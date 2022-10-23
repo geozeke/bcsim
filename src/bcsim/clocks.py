@@ -1,7 +1,7 @@
 """Clock classes."""
 
-from bcsim import Ball
-from bcsim import Rail
+from bcsim.rail import Ball
+from bcsim.rail import Rail
 
 
 class Clock:
