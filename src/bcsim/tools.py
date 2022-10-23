@@ -5,8 +5,8 @@ import multiprocessing as mp
 import os
 from datetime import datetime as dt
 
-from bcsim import Clock
-from bcsim import FastClock
+from bcsim.clocks import Clock
+from bcsim.clocks import FastClock
 
 
 def clear():

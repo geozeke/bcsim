@@ -37,8 +37,8 @@ import sys
 from datetime import datetime as dt
 from pathlib import Path
 
-from bcsim import clear
-from bcsim import runSimulation
+from bcsim.tools import clear
+from bcsim.tools import runSimulation
 
 # --------------------------------------------------------------------
 
@@ -90,7 +90,7 @@ def main():
     &#34;&#34;&#34;
     msg = &#34;&#34;&#34;Rolling ball clock simulator.&#34;&#34;&#34;
 
-    epi = &#34;Version 1.0.5&#34;
+    epi = &#34;Version 1.0.6&#34;
 
     parser = argparse.ArgumentParser(description=msg, epilog=epi)
 
@@ -193,7 +193,7 @@ input.</li>
     &#34;&#34;&#34;
     msg = &#34;&#34;&#34;Rolling ball clock simulator.&#34;&#34;&#34;
 
-    epi = &#34;Version 1.0.5&#34;
+    epi = &#34;Version 1.0.6&#34;
 
     parser = argparse.ArgumentParser(description=msg, epilog=epi)
 
